@@ -5,10 +5,12 @@ class Test:
     Performs functional tests on CloudFormation templates.
     """
 
-    def run(self, entry_point, project_root='./'):
+    @staticmethod
+    def run(entry_point, project_root='./'):
         print("doing a run, yeah!")
         config = Config(entry_point, project_root=project_root)
 
-
-    def resume(self, run_id):
+    @staticmethod
+    def resume(run_id):
         # do some stuff
+        pass
