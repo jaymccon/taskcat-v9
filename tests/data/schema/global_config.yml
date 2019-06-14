@@ -1,5 +1,5 @@
 ---
-boto_profile: test
+profile_name: test
 lint: true
 parameters:
     MyParam: MyValue
