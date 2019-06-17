@@ -9,6 +9,7 @@ from taskcat.client_factory import ClientFactory
 from taskcat.common_utils import absolute_path
 from taskcat.exceptions import TaskCatException
 from taskcat.common_utils import schema_validate as validate
+from taskcat.cfn.template import Template
 
 LOG = logging.getLogger(__name__)
 

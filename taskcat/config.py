@@ -105,6 +105,17 @@ class Config:  # pylint: disable=too-many-instance-attributes,too-few-public-met
         # build client_factory_instances
         self._build_boto_factories()
 
+        # build and attach template objects
+        self._get_templates()
+
+    def _get_templates(self):
+        for _, test in self.tests.items():
+            test.template = Template(
+                template_path=test.template_file,
+                project_root=self.project_root,
+                client_factory_instance=test.client_factory
+            )
+
     def _build_cred_dict(self):
         creds = {}
         for cred_type in ["aws_secret_key", "aws_access_key", "profile_name"]:

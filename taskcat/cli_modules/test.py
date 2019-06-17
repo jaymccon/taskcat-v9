@@ -5,12 +5,17 @@ class Test:
     Performs functional tests on CloudFormation templates.
     """
 
-    @staticmethod
-    def run(entry_point, project_root='./'):
-        print("doing a run, yeah!")
+    def run(self, entry_point, project_root='./'):
         config = Config(entry_point, project_root=project_root)
+        # 1. build lambdas
+        # 2. lint
+        # 3. s3 sync
+        # 4. validate
+        # 5. launch stacks
+        # 6. wait for completion
+        # 7. delete stacks
+        # 8. create report
 
-    @staticmethod
-    def resume(run_id):
+    def resume(self, run_id):
         # do some stuff
-        pass
+        raise NotImplementedError()
